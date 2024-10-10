@@ -1,0 +1,23 @@
+optimized_original_name = "original_opt.ll"
+
+[optimize]
+original = "-O3"
+mutant = "-O3"
+
+[mutate]
+type = 1
+max_passes = 16
+
+[[pipeline]]
+name = "better"
+mutant_name = "mutated.ll"
+optimized_mutant_name = "mutated_opt.ll"
+remove_last = 0
+reverse_check = false
+
+[[pipeline]]
+name = "worse"
+mutant_name = "mutated_removed.ll"
+optimized_mutant_name = "mutated_removed_opt.ll"
+remove_last = 1
+reverse_check = true

@@ -1,0 +1,9 @@
+[optimize]
+original = "-O3"
+mutant = "-O2"
+
+[mutate]
+type = 1
+max_passes = 16
+
+[[pipeline]]

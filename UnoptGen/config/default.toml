@@ -1,0 +1,15 @@
+[optimize]
+original = "-O3"
+mutant = "-O3"
+
+[mutate]
+type = 1
+max_passes = 16
+
+[[pipeline]]
+name = "normal"
+original_name = "original.ll"
+mutant_name = "mutated.ll"
+optimized_original_name = "original_opt.ll"
+optimized_mutant_name = "mutated_opt.ll"
+
